@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*, ::before, ::after{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    font-family: "Space Grotesk";
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.card-container::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35%;
+    height: 100vh;
+    z-index: -99;
+    background-image: url("./images/bg-main-desktop.png")
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    width: 80%;
+    height: 500px;
+    /* background-color: grey; */
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form form{
+    width: 100%;  
+}
+.form form input{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 80%;
+    padding: 15px;
+    border: .2px solid rgba(0,0,0,0.4);
+    border-radius:7px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.form form .numbers label{
+    display: block;
+    
+}
+.form form .numbers input[type="number"]{
+    display: inline;
+    width: 20%;
+    padding: 15px;
+    border: .2px solid rgba(0,0,0,0.4);
+    border-radius:7px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-right: 10px;
+}
+.form  input[type="submit"]{
+    color: #fff;
+    background-color: hsl(278, 68%, 11%);
+}
+.form  input[type="submit"]:hover{
+    cursor: pointer;
+}
