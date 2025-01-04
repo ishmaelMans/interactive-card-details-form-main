@@ -24,15 +24,29 @@
     width: 35%;
     height: 100vh;
     z-index: -99;
-    background-image: url("./images/bg-main-desktop.png")
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
 }
 .card-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 100px;
-    width: 80%;
-    height: 500px;
+    width:75%;
+    /* height: 70%; */
     /* background-color: grey; */
+}
+
+.cards{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+.cards .front-card{
+    margin-bottom: 25px;
+}
+.cards .back-card{
+    margin-left: 90px;
 }
 
 .form{
