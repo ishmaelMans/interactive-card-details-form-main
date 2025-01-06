@@ -30,60 +30,123 @@
 .card-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 100px;
-    width:75%;
-    /* height: 70%; */
-    /* background-color: grey; */
+    grid-gap: 90px;
+    max-width:1100px;
+    width: 100%;
+    padding: 20px;
 }
 
 .cards{
     display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cards .front-card .card-front{
+    background: url('./images/bg-card-front.png');
+    color: #fff;
+}
+.card-front text.card-number {
+    font-size: 1.5rem;
+    letter-spacing: .15em;
+}
+.cards .back-card .card-back{
+    background: url('./images/bg-card-back.png');
+    color: #fff;
 }
 .cards .front-card{
     margin-bottom: 25px;
 }
 .cards .back-card{
-    margin-left: 90px;
+    margin-left: 100px;
 }
 
 .form{
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: left;
+    gap: .5rem;
+    /* height: 100%; */
+    padding: 1.5rem;
 }
 
-.form form{
-    width: 100%;  
-}
-.form form input{
+.form .input-container{
     display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 80%;
-    padding: 15px;
+    /* flex: auto; */
+    /* flex-flow: column; */
+    flex-direction: column;
+    gap: .5rem;
+    max-width: 450px;
+    width: 100%;  
+    height: 280px;
+}
+.form .input-container span{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    gap: .5rem;
+}
+.form .input-container label{
+    font-size: .7rem;
+    width: fit-content;
+    text-wrap: nowrap;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+.form  span output{
+    font-size: .6rem;
+    visibility: hidden;
+}
+.form  .numbers output{
+    font-size: .6rem;
+    visibility: hidden;
+}
+.form input{
+    font-family: "Space Grotesk";
+    display: flex;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 12px;
     border: .2px solid rgba(0,0,0,0.4);
     border-radius:7px;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    /* margin-bottom: 15px; */
 }
-.form form .numbers label{
-    display: block;
+.form .confirm{
+    margin-top: 15px;
+    padding: 15px;
+}
+.form .numbers{
+    display: flex;
+    width: 100%; 
+}
+.form .monthly label{
+    display: block;  
+}
+.form .cvc label{
+    display: block;  
+}
+.form .monthly{
+    width: 60%;
     
 }
-.form form .numbers input[type="number"]{
+.form .monthly input[type="text"]{
     display: inline;
-    width: 20%;
-    padding: 15px;
+    width: 15%;
+    padding: 10px;
+    width: 40%;
     border: .2px solid rgba(0,0,0,0.4);
     border-radius:7px;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.form .cvc input{
+    width: 15%;
+    padding: 10px;
+    width: 100%;
+    border: .2px solid rgba(0,0,0,0.4);
+    border-radius:7px;
+    margin-top: 5px;
     margin-right: 10px;
 }
 .form  input[type="submit"]{
@@ -92,4 +155,57 @@
 }
 .form  input[type="submit"]:hover{
     cursor: pointer;
+}
+
+@media screen and (max-width: 1080px){
+    .cards .front-card {
+        margin-left: 0;
+    }
+    .cards .back-card {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 940px){
+    .container {
+        font-family: "Space Grotesk";
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        height: 900px;
+        width: 100%;
+        height: 100vh;
+    }
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .card-container::before {
+        content: "";
+        position: absolute;
+        z-index: -99;
+        background-image: none;
+    }
+        .form input {
+            font-family: "Space Grotesk";
+            display: flex;
+            font-size: 1.1rem;
+            width: 100%;
+            padding: 12px;
+            border: .2px solid rgba(0, 0, 0, 0.4);
+            border-radius: 7px;
+            /* margin-bottom: 15px; */
+        }
+    
 }

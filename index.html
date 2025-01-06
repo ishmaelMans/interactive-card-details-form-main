@@ -17,30 +17,54 @@
   </head>
   <body>
     <main>
+      <!-- flex -->
       <div class="container">
+        <!-- grid -->
         <div class="card-container">
+          <!-- flex -->
           <div class="cards">
             <div class="front-card">
-              <img src="./images/bg-card-front.png" alt="">
+              <svg width="447" viewBox="0 0 447 245" class="card-front" fill="currentColor">
+                <circle cx="13%" cy="23%" r="7%" fill="currentColor"></circle><circle cx="25%" cy="23%" r="3%" stroke="currentColor" fill="none"></circle>
+                <text x="7%" y="70%" class="card-number" id="card-number-input">0000 0000 0000 0000</text>
+                <text x="7%" y="88%" class="card-name">JANE APPLESEED</text><text x="93%" y="88%" text-anchor="end" class="card-exp">00/00</text>
+              </svg>
             </div> 
             <div class="back-card">
-              <img src="./images/bg-card-back.png" alt="">
+              <svg width="447" viewBox="0 0 447 245" class="card-back" fill="currentColor">
+                <text x="88%" y="51%" text-anchor="end" class="card-cvc">000</text>
+              </svg>
+
             </div> 
           </div>
-          <div class="form">
-            <form>
-              <label for="">CARDHOLDER NAME</label>
-              <input type="text" placeholder="e.g Jane Appleseed">
-              <label for="">CARD NUMBER</label>
-              <input type="text" placeholder="e.g 1234 5678 9123 0000">
+          <form class="form">
+            <div class="input-container">
+              <span class="cardholder">
+                <label for="">CARDHOLDER NAME</label>
+                <input type="text" placeholder="e.g Jane Appleseed" autocomplete="off" name="cardholder" id="cardholder" >
+                <output class="">Can't be blank</output>
+              </span>
+              <span class="cardnumber">
+                <label for="">CARD NUMBER</label>
+                <input type="text" placeholder="e.g 1234 5678 9123 0000" name="cardnumber" id="cardnumber">
+                <output>Can't be blank</output>
+              </span>
               <div class="numbers">
-                <label for="expiry-date">EXP. DATE (MM/YY)</label> 
-                <input type="number" id="expiry-date" name="expiry-date" placeholder="MM"> 
-                <input type="number" id="expiry-date" name="expiry-date" placeholder="YY"> 
+                <div class="monthly">
+                  <label for="expiry-date">EXP. DATE (MM/YY)</label> 
+                  <input type="text" id="expiry-date" name="expiry-date" placeholder="MM"> 
+                  <input type="text" id="expiry-date" name="expiry-date" placeholder="YY"> 
+                 <output>Can't be blank</output>
+                </div>
+                <div class="cvc">
+                  <label for="expiry-date">CVC</label> 
+                  <input type="text" id="expiry-date" name="expiry-date" placeholder="e.g. 123"> 
+                  <output>Can't be blank</output>
+                </div>
               </div>
-              <input type="submit" value="Confirm">
-            </form>
-          </div>
+              <input class="confirm" type="submit" value="Confirm">
+            </div>
+          </form>
         </div>
       </div>
     </main>
@@ -54,5 +78,6 @@
 
     <!-- Thank you! We've added your card details Continue -->
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
