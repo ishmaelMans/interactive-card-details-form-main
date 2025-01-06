@@ -55,6 +55,7 @@
 }
 .cards .front-card{
     margin-bottom: 25px;
+    margin-left: -100px;
 }
 .cards .back-card{
     margin-left: 100px;
@@ -72,12 +73,10 @@
 
 .form .input-container{
     display: flex;
-    /* flex: auto; */
-    /* flex-flow: column; */
     flex-direction: column;
     gap: .5rem;
-    max-width: 450px;
-    width: 100%;  
+    width: 350px;
+    max-width: 100%;  
     height: 280px;
 }
 .form .input-container span{
@@ -105,7 +104,7 @@
     font-family: "Space Grotesk";
     display: flex;
     font-size: 1.1rem;
-    width: 100%;
+    width: 359px;
     padding: 12px;
     border: .2px solid rgba(0,0,0,0.4);
     border-radius:7px;
